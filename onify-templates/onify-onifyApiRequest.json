@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Onify | onifyApiRequest | GET example",
+        "id": "onify.onifyApiRequest.get_example",
+        "appliesTo": [
+            "bpmn:ServiceTask"
+        ],
+        "description": "GET information from Onify API. Get settings from `/my/settings` in this example. Use `onifyElevatedApiRequest` to elevate user request.",
+        "version": 1,
+        "metadata": {
+            "tags": [
+                "Onify",
+                "Onify.onifyApiRequest"
+            ]
+        },
+        "entriesVisible": true,
+        "properties": [
+            {
+                "label": "Result variable",
+                "value": "getExampleResult",
+                "type": "Hidden",
+                "binding": {
+                    "type": "camunda:outputParameter",
+                    "source": "${content.output.body}"
+                }
+            }                        
+        ],
+        "scopes": [
+            {
+                "type": "camunda:Connector",
+                "properties": [
+                    {
+                        "label": "ConnectorId",
+                        "type": "Hidden",
+                        "value": "onifyApiRequest",
+                        "binding": {
+                            "type": "property",
+                            "name": "connectorId"
+                        }
+                    },
+                    {
+                        "label": "url",
+                        "type": "Hidden",
+                        "value": "/my/settings",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "url"
+                        }
+                    },
+                    {
+                        "label": "throwHttpErrors",
+                        "type": "Hidden",
+                        "value": "${true}",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "throwHttpErrors"
+                        }
+                    },
+                    {
+                        "label": "method",
+                        "type": "Hidden",
+                        "value": "GET",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "method"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Onify | onifyApiRequest | POST example",
+        "id": "onify.onifyApiRequest.post_example",
+        "appliesTo": [
+            "bpmn:ServiceTask"
+        ],
+        "description": "POST information from Onify API. Create new item in this example. Use `onifyElevatedApiRequest` to elevate user request.",
+        "version": 1,
+        "metadata": {
+            "tags": [
+                "Onify",
+                "Onify.onifyApiRequest"
+            ]
+        },
+        "entriesVisible": true,
+        "properties": [
+            {
+                "label": "Result variable",
+                "value": "postExampleResult",
+                "type": "Hidden",
+                "binding": {
+                    "type": "camunda:outputParameter",
+                    "source": "${content.output.body}"
+                }
+            }                        
+        ],
+        "scopes": [
+            {
+                "type": "camunda:Connector",
+                "properties": [
+                    {
+                        "label": "ConnectorId",
+                        "type": "Hidden",
+                        "value": "onifyApiRequest",
+                        "binding": {
+                            "type": "property",
+                            "name": "connectorId"
+                        }
+                    },
+                    {
+                        "label": "url",
+                        "type": "Hidden",
+                        "value": "/admin/items",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "url"
+                        }
+                    },
+                    {
+                        "label": "throwHttpErrors",
+                        "type": "Hidden",
+                        "value": "${true}",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "throwHttpErrors"
+                        }
+                    },
+                    {
+                        "label": "method",
+                        "type": "Hidden",
+                        "value": "POST",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "method"
+                        }
+                    },
+                    {
+                        "label": "payload",
+                        "value": "next(null, {\n  'key': 'test12345',\n  'name': 'Testing 12345',\n  'tag': ['test'],\n  'type': 'test'\n});",
+                        "type": "Hidden",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "payload",
+                            "scriptFormat": "js"
+                        }
+                    }
+                ]
+            }
+        ]
+    }    
+]

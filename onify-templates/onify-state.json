@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Onify | State | Set and update state",
+        "id": "onify.state.set_update_state",
+        "appliesTo": [
+            "bpmn:Task"
+        ],
+        "description": "Set and update state. See https://support.onify.co/docs/workflows-2 for more info.",
+        "version": 1,
+        "metadata": {
+            "tags": [
+                "Onify",
+                "Onify.State"
+            ]
+        },
+        "entriesVisible": true,
+        "properties": [
+            {
+                "label": "Input state",
+                "description": "Set state",
+                "value": "next(null, {\n  id: content.id,\n  name: content.name\n});",
+                "type": "Hidden",
+                "binding": {
+                    "type": "camunda:inputParameter",
+                    "name": "state",
+                    "scriptFormat": "js"
+                }
+            },
+            {
+                "label": "Output state",
+                "description": "Update state",
+                "value": "state",
+                "type": "Hidden",
+                "binding": {
+                    "type": "camunda:outputParameter",
+                    "name": "state",
+                    "source": "next(null, {\n  id: content.id,\n  result: {\n    done: true\n  }\n});",
+                    "scriptFormat": "js"
+                }
+            }                        
+        ],
+        "scopes": [
+        ]
+    },
+    {
+        "name": "Onify | State | Define multiple states",
+        "id": "onify.state.multiple_states",
+        "appliesTo": [
+            "bpmn:Task",
+            "bpmn:Event"
+        ],
+        "description": "Define multiple states. See https://support.onify.co/docs/workflows-2 for more info.",
+        "version": 1,
+        "metadata": {
+            "tags": [
+                "Onify",
+                "Onify.State"
+            ]
+        },
+        "entriesVisible": true,
+        "properties": [
+            {
+                "label": "State",
+                "description": "Define multiple states",
+                "value": "next(null, [\n    {\n        id: 'state1',\n        name: 'State 1',\n        required: true\n    },\n    {\n        id: 'state2',\n        name: 'State 2',\n        required: true\n    }\n]);: 'state2',\n        name: 'State 2',\n        required: true\n    }\n]);",
+                "type": "Hidden",
+                "binding": {
+                    "type": "camunda:inputParameter",
+                    "name": "state",
+                    "scriptFormat": "js"
+                }
+            }                        
+        ],
+        "scopes": [
+        ]
+    }
+]

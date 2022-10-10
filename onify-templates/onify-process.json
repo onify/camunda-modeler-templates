@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Onify | Process | Set process info",
+        "id": "onify.process.set_process_info",
+        "appliesTo": [
+            "bpmn:Task",
+            "bpmn:Event"
+        ],
+        "description": "Set process info. See https://support.onify.co/docs/workflows-2 for more info.",
+        "version": 1,
+        "metadata": {
+            "tags": [
+                "Onify",
+                "Onify.Process"
+            ]
+        },
+        "entriesVisible": true,
+        "properties": [
+            {
+                "label": "Process info",
+                "description": "Set process info",
+                "value": "next(null, {\n  title: 'My title',\n  description: 'My description',\n  tag: [\n    'tag1',\n    'tag2'\n  ]\n});",
+                "type": "Hidden",
+                "binding": {
+                    "type": "camunda:inputParameter",
+                    "name": "process",
+                    "scriptFormat": "js"
+                }
+            }                   
+        ],
+        "scopes": [
+        ]
+    },
+    {
+        "name": "Onify | Process | Set process status",
+        "id": "onify.process.set_process_status",
+        "appliesTo": [
+            "bpmn:Task",
+            "bpmn:Event"
+        ],
+        "description": "Set process status. See https://support.onify.co/docs/workflows-2 for more info.",
+        "version": 1,
+        "metadata": {
+            "tags": [
+                "Onify",
+                "Onify.Process"
+            ]
+        },
+        "entriesVisible": true,
+        "properties": [
+            {
+                "label": "Process status",
+                "description": "Set process status",
+                "value": "next(null, {\n  statuskey: 'stop',\n  statuscode: 401,\n  statusmessage: 'Unauthorized',\n  error: true\n});",
+                "type": "Hidden",
+                "binding": {
+                    "type": "camunda:inputParameter",
+                    "name": "status",
+                    "scriptFormat": "js"
+                }
+            }                   
+        ],
+        "scopes": [
+        ]
+    }
+]    

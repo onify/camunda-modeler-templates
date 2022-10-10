@@ -1,0 +1,81 @@
+[
+    {
+        "name": "Onify | httpRequest | GET example",
+        "id": "onify.httpRequest.get_example",
+        "appliesTo": [
+            "bpmn:ServiceTask"
+        ],
+        "description": "GET information from external API.",
+        "version": 1,
+        "metadata": {
+            "tags": [
+                "Onify",
+                "Onify.httpRequest"
+            ]
+        },
+        "entriesVisible": true,
+        "properties": [
+            {
+                "label": "Result variable",
+                "value": "getExampleResult",
+                "type": "Hidden",
+                "binding": {
+                    "type": "camunda:outputParameter",
+                    "source": "${content.output.body}"
+                }
+            }                        
+        ],
+        "scopes": [
+            {
+                "type": "camunda:Connector",
+                "properties": [
+                    {
+                        "label": "ConnectorId",
+                        "type": "Hidden",
+                        "value": "httpRequest",
+                        "binding": {
+                            "type": "property",
+                            "name": "connectorId"
+                        }
+                    },
+                    {
+                        "label": "responseType",
+                        "type": "Hidden",
+                        "value": "json",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "responseType"
+                        }
+                    },
+                    {
+                        "label": "url",
+                        "type": "Hidden",
+                        "value": "https://jsonplaceholder.typicode.com/users/1",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "url"
+                        }
+                    },
+                    {
+                        "label": "throwHttpErrors",
+                        "type": "Hidden",
+                        "value": "${true}",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "throwHttpErrors"
+                        }
+                    },
+                    {
+                        "label": "method",
+                        "type": "Hidden",
+                        "value": "GET",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "method"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
