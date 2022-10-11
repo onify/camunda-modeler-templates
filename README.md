@@ -22,6 +22,7 @@ Here are some limitations for the Camunda Modeler elements templates.
 
 * Does not support variables where `Assignment type` is `List` (script is used instead)
 * Does not support variables where `Assignment type` is `Map` (script is used instead)
+* Tagging only seem to support 1 tag
 
 ## Support
 

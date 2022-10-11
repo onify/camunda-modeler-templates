@@ -9,8 +9,7 @@
         "description": "Set process info. See https://support.onify.co/docs/workflows-2 for more info.",
         "metadata": {
             "tags": [
-                "Onify",
-                "Onify.Process"
+                "Onify"
             ]
         },
         "entriesVisible": true,
@@ -40,8 +39,7 @@
         "description": "Set process status. See https://support.onify.co/docs/workflows-2 for more info.",
         "metadata": {
             "tags": [
-                "Onify",
-                "Onify.Process"
+                "Onify"
             ]
         },
         "entriesVisible": true,

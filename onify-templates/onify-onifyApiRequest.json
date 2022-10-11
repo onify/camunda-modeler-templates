@@ -8,8 +8,7 @@
         "description": "GET information from Onify API. Get settings from `/my/settings` in this example. Use `onifyElevatedApiRequest` to elevate user request.",
         "metadata": {
             "tags": [
-                "Onify",
-                "Onify.onifyApiRequest"
+                "Onify"
             ]
         },
         "entriesVisible": true,
@@ -77,8 +76,7 @@
         "description": "POST information from Onify API. Create new item in this example. Use `onifyElevatedApiRequest` to elevate user request.",
         "metadata": {
             "tags": [
-                "Onify",
-                "Onify.onifyApiRequest"
+                "Onify"
             ]
         },
         "entriesVisible": true,

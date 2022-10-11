@@ -8,8 +8,7 @@
         "description": "Set and update state. See https://support.onify.co/docs/workflows-2 for more info.",
         "metadata": {
             "tags": [
-                "Onify",
-                "Onify.State"
+                "Onify"
             ]
         },
         "entriesVisible": true,
@@ -51,8 +50,7 @@
         "description": "Define multiple states. See https://support.onify.co/docs/workflows-2 for more info.",
         "metadata": {
             "tags": [
-                "Onify",
-                "Onify.State"
+                "Onify"
             ]
         },
         "entriesVisible": true,

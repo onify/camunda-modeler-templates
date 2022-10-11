@@ -8,8 +8,7 @@
         "description": "GET information from external API. For all options and more information, see https://github.com/sindresorhus/got/blob/main/documentation/2-options.md.",
         "metadata": {
             "tags": [
-                "Onify",
-                "Onify.httpRequest"
+                "Onify"
             ]
         },
         "entriesVisible": true,
@@ -86,8 +85,7 @@
         "description": "POST information to external API.. For all options and more information, see https://github.com/sindresorhus/got/blob/main/documentation/2-options.md.",
         "metadata": {
             "tags": [
-                "Onify",
-                "Onify.httpRequest"
+                "Onify"
             ]
         },
         "entriesVisible": true,
