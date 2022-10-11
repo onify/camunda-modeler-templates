@@ -5,8 +5,7 @@
         "appliesTo": [
             "bpmn:ServiceTask"
         ],
-        "description": "GET information from external API.",
-        "version": 1,
+        "description": "GET information from external API. For all options and more information, see https://github.com/sindresorhus/got/blob/main/documentation/2-options.md.",
         "metadata": {
             "tags": [
                 "Onify",
@@ -77,5 +76,103 @@
                 ]
             }
         ]
-    }
+    },
+    {
+        "name": "Onify | httpRequest | POST example",
+        "id": "onify.httpRequest.post_example",
+        "appliesTo": [
+            "bpmn:ServiceTask"
+        ],
+        "description": "POST information to external API.. For all options and more information, see https://github.com/sindresorhus/got/blob/main/documentation/2-options.md.",
+        "metadata": {
+            "tags": [
+                "Onify",
+                "Onify.httpRequest"
+            ]
+        },
+        "entriesVisible": true,
+        "properties": [
+            {
+                "label": "Result variable",
+                "value": "postExampleResult",
+                "type": "Hidden",
+                "binding": {
+                    "type": "camunda:outputParameter",
+                    "source": "${content.output.body}"
+                }
+            }                        
+        ],
+        "scopes": [
+            {
+                "type": "camunda:Connector",
+                "properties": [
+                    {
+                        "label": "ConnectorId",
+                        "type": "Hidden",
+                        "value": "httpRequest",
+                        "binding": {
+                            "type": "property",
+                            "name": "connectorId"
+                        }
+                    },
+                    {
+                        "label": "responseType",
+                        "type": "Hidden",
+                        "value": "json",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "responseType"
+                        }
+                    },
+                    {
+                        "label": "url",
+                        "type": "Hidden",
+                        "value": "https://jsonplaceholder.typicode.com/users",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "url"
+                        }
+                    },
+                    {
+                        "label": "throwHttpErrors",
+                        "type": "Hidden",
+                        "value": "${true}",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "throwHttpErrors"
+                        }
+                    },
+                    {
+                        "label": "method",
+                        "type": "Hidden",
+                        "value": "POST",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "method"
+                        }
+                    },
+                    {
+                        "label": "json",
+                        "value": "next(null, {\n  'firstname': 'John',\n  'lastname': 'Doe',\n  'title': 'Caretaker'\n});",
+                        "type": "Hidden",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "json",
+                            "scriptFormat": "js"
+                        }
+                    },
+                    {
+                        "label": "headers",
+                        "value": "next(null, {\n  'Content-Type': 'application/json'\n});",
+                        "type": "Hidden",
+                        "binding": {
+                            "type": "camunda:inputParameter",
+                            "name": "headers",
+                            "scriptFormat": "js"
+                        }
+                    }
+                ]
+            }
+        ]
+    }    
 ]
