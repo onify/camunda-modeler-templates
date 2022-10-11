@@ -6,7 +6,6 @@
             "bpmn:ServiceTask"
         ],
         "description": "GET information from Onify API. Get settings from `/my/settings` in this example. Use `onifyElevatedApiRequest` to elevate user request.",
-        "version": 1,
         "metadata": {
             "tags": [
                 "Onify",
@@ -76,7 +75,6 @@
             "bpmn:ServiceTask"
         ],
         "description": "POST information from Onify API. Create new item in this example. Use `onifyElevatedApiRequest` to elevate user request.",
-        "version": 1,
         "metadata": {
             "tags": [
                 "Onify",

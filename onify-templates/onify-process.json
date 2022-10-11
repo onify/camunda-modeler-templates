@@ -7,7 +7,6 @@
             "bpmn:Event"
         ],
         "description": "Set process info. See https://support.onify.co/docs/workflows-2 for more info.",
-        "version": 1,
         "metadata": {
             "tags": [
                 "Onify",
@@ -39,7 +38,6 @@
             "bpmn:Event"
         ],
         "description": "Set process status. See https://support.onify.co/docs/workflows-2 for more info.",
-        "version": 1,
         "metadata": {
             "tags": [
                 "Onify",

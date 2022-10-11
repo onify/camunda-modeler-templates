@@ -6,7 +6,6 @@
             "bpmn:Task"
         ],
         "description": "Set and update state. See https://support.onify.co/docs/workflows-2 for more info.",
-        "version": 1,
         "metadata": {
             "tags": [
                 "Onify",
@@ -50,7 +49,6 @@
             "bpmn:Event"
         ],
         "description": "Define multiple states. See https://support.onify.co/docs/workflows-2 for more info.",
-        "version": 1,
         "metadata": {
             "tags": [
                 "Onify",
