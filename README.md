@@ -8,13 +8,20 @@ This repo contains templates customized for Onify. Please feel free to use and/o
 
 ## Requirements
 
-* [Camunda Modeler](https://camunda.com/download/modeler/)
+* [Camunda Modeler 5.x](https://camunda.com/download/modeler/)
 
 ## Setup
 
 Copy `./onify-templates/*` to Camunda Modeler element templates folder (`./resources/element-templates`). 
 
 > Note: You need to restart Camunda Modeler if you update the templates.
+
+## Limitations
+
+Here are some limitations for the Camunda Modeler elements templates.
+
+* Does not support variables where `Assignment type` is `List` (script is used instead)
+* Does not support variables where `Assignment type` is `Map` (script is used instead)
 
 ## Support
 
